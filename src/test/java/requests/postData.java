@@ -34,6 +34,7 @@ public class postData extends BaseAPITest  {
                 body("status",equalTo("OK"));
 
 
+
     }
 
 
