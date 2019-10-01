@@ -43,9 +43,21 @@ String resbody = "{"+
    // System.out.println(responseString);
     JsonPath jsp = new JsonPath(responseString);
     String PlaceID = jsp.get("place_id");
-    System.out.println(PlaceID);
+    System.out.println("Place ID: "+PlaceID);
+
+        /*************           Place this Place ID in the delete request             *********/
 
 
+    given().
+            queryParam("key","qaclick123").
+            body("{"+
+
+                   "\"place_id\": \""+PlaceID+"\" "+
+                "}").
+            when().
+            post("/maps/api/place/delete/json").
+            then().assertThat().statusCode(200).and().contentType(ContentType.JSON).and().
+            body("status",equalTo("OK"));
 }
 
 

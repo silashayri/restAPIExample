@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="allianz-rest-api" />
         <module name="restAPIExamples" />
+        <module name="allianz-rest-api" />
+        <module name="restAPIExample" />
       </profile>
     </annotationProcessing>
   </component>
