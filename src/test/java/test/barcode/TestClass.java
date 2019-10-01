@@ -1,6 +1,5 @@
 package test.barcode;
 
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 import requests.Service1;
